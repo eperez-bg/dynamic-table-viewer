@@ -3,9 +3,8 @@ import React, { useState } from "react";
 const CapCheckbox = () => {
     const [isChecked, setIsChecked] = useState(false);
 
-    const handleChange = (e) => {
-        console.log("changed", e.target.checked);
-        setIsChecked(e.target.checked);
+    const handleChange = () => {
+        setIsChecked(!isChecked);
     };
 
     return (
