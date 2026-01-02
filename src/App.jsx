@@ -38,9 +38,9 @@ function App() {
       
       <div class="bottle-image-container">
         <img src="/public/images/base.jpg" class="image-base"/>
-        {c1Checked && <img src="/public/images/cap.png" class="image-overlay"/>}
-        {c2Checked && <img src="/public/images/label.png" class="image-overlay"/>}
-        {c3Checked && <img src="/public/images/chapstick.png" class="image-overlay"/>}
+        {c1Checked && <img src="/public/images/cap.png" class="image image-overlay"/>}
+        {c2Checked && <img src="/public/images/label.png" class="image image-overlay"/>}
+        {c3Checked && <img src="/public/images/chapstick.png" class="image image-overlay"/>}
       </div>
 
       <input 
