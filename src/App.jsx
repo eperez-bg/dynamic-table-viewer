@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import CapCheckbox from './components/capCheckbox'
 import './css/App.css'
 
 function App() {
