@@ -4,6 +4,16 @@ import './css/App.css'
 
 function App() {
   
+  // Table State & Handling
+  const options = [
+    { id: 0, label:"Classic", src: "/public/images/coffee1.jpg"},
+    { id: 1, label:"Second", src: "/public/images/coffee2.jpg"},
+    { id: 2, label:"Third", src: "/public/images/coffee3.jpg"},
+  ];
+
+  const [selectedID, setSelectedID] = useState(options[0].id);
+
+
   // Checkbox State & Handling
   const [c1Checked, setc1Checked] = useState(false);  // Cap
   const [c2Checked, setc2Checked] = useState(false);  // Label
@@ -23,49 +33,67 @@ function App() {
   };
 
 
-
-
   return (
     <>
       <h1>Table Selector</h1>
 
       <div class="table-image-container">
-        <img src='/public/images/coffee1.jpg' class="table-image"/>
-        
+        <img src={options[selectedID].src} class="table-image"/>
+
+        <div class="table-options">
+          {options.map( (opt) => (
+            <button
+              key={opt.id}
+              class="table-button"
+              type='button'
+              role='radio'
+              aria-checked={selectedID === opt.id}
+              onClick={() => setSelectedID(opt.id)}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
       </div>
+
 
       <h1>Custom Water Bottle Builder</h1>
       
       <div class="bottle-image-container">
         <img src="/public/images/base.jpg" class="image-base"/>
-        {c1Checked && <img src="/public/images/cap.png" class="image image-overlay"/>}
-        {c2Checked && <img src="/public/images/label.png" class="image image-overlay"/>}
-        {c3Checked && <img src="/public/images/chapstick.png" class="image image-overlay"/>}
+        {c1Checked && <img src="/public/images/cap.png" class="image-overlay"/>}
+        {c2Checked && <img src="/public/images/label.png" class="image-overlay"/>}
+        {c3Checked && <img src="/public/images/chapstick.png" class="image-overlay"/>}
       </div>
 
-      <input 
-        id='cap'
-        type="checkbox"
-        checked={c1Checked}
-        onChange={handlec1Checked}
-        style={{position:"relative", zIndex:2}}
-      />
+      <div class="checkbox-container">
+        <input 
+          id='cap'
+          class="checkbox-wrapper-41"
+          type="checkbox"
+          checked={c1Checked}
+          onChange={handlec1Checked}
+          style={{position:"relative", zIndex:2}}
+        />
 
-      <input 
-        id='label'
-        type="checkbox"
-        checked={c2Checked}
-        onChange={handlec2Checked}
-        style={{position:"relative", zIndex:2}}
-      />
+        <input 
+          id='label'
+          class="checkbox-wrapper-41"
+          type="checkbox"
+          checked={c2Checked}
+          onChange={handlec2Checked}
+          style={{position:"relative", zIndex:2}}
+        />
 
-      <input 
-        id='chapstick'
-        type="checkbox"
-        checked={c3Checked}
-        onChange={handlec3Checked}
-        style={{position:"relative", zIndex:2}}
-      />
+        <input 
+          id='chapstick'
+          class="checkbox-wrapper-41"
+          type="checkbox"
+          checked={c3Checked}
+          onChange={handlec3Checked}
+          style={{position:"relative", zIndex:2}}
+        />
+      </div>
 
     </>
   )

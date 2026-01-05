@@ -1,3 +1,15 @@
+.table-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-button {
+  padding: "8px 12px";
+  border-radius: 8px;
+  border: "1px solid #ccc";
+}
+
 .bottle-image-container {
   max-width: 100%;
   max-height: 100%;
@@ -33,6 +45,12 @@
 .table-image {
   max-width: 50%;
   max-height: 50%;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
