@@ -7,8 +7,13 @@ function App() {
   // Table State & Handling
   const options = [
     { id: 0, label:"Classic", src: "/public/images/coffee1.jpg"},
-    { id: 1, label:"Second", src: "/public/images/coffee2.jpg"},
-    { id: 2, label:"Third", src: "/public/images/coffee3.jpg"},
+    { id: 1, label:"Birch", src: "/public/images/coffee2.jpg"},
+    { id: 2, label:"White Marble", src: "/public/images/coffee3.jpg"},
+    { id: 3, label:"Black Marble", src: "/public/images/coffee4.jpg"},
+    { id: 4, label:"Black Marble w/ Black Rails", src: "/public/images/coffee5.jpg"},
+    { id: 5, label:"White Marble w/ Gold Rails", src: "/public/images/coffee6.jpg"},
+    { id: 6, label:"White Marble w/ White Rails", src: "/public/images/coffee7.jpg"},
+    { id: 7, label:"Classic w/ White Rails", src: "/public/images/coffee8.jpg"},
   ];
 
   const [selectedID, setSelectedID] = useState(options[0].id);
