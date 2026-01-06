@@ -5,14 +5,14 @@ function App() {
   
   // Table State & Handling
   const options = [
-    { id: 0, label:"Classic", src: "/public/images/coffee1.jpg"},
-    { id: 1, label:"Birch", src: "/public/images/coffee2.jpg"},
-    { id: 2, label:"White Marble", src: "/public/images/coffee3.jpg"},
-    { id: 3, label:"Black Marble", src: "/public/images/coffee4.jpg"},
-    { id: 4, label:"Black Marble w/ Black Rails", src: "/public/images/coffee5.jpg"},
-    { id: 5, label:"White Marble w/ Gold Rails", src: "/public/images/coffee6.jpg"},
-    { id: 6, label:"White Marble w/ White Rails", src: "/public/images/coffee7.jpg"},
-    { id: 7, label:"Classic w/ White Rails", src: "/public/images/coffee8.jpg"},
+    { id: 0, label:"Classic", src: "/images/coffee1.jpg"},
+    { id: 1, label:"Birch", src: "/images/coffee2.jpg"},
+    { id: 2, label:"White Marble", src: "/images/coffee3.jpg"},
+    { id: 3, label:"Black Marble", src: "/images/coffee4.jpg"},
+    { id: 4, label:"Black Marble w/ Black Rails", src: "/images/coffee5.jpg"},
+    { id: 5, label:"White Marble w/ Gold Rails", src: "/images/coffee6.jpg"},
+    { id: 6, label:"White Marble w/ White Rails", src: "/images/coffee7.jpg"},
+    { id: 7, label:"Classic w/ White Rails", src: "/images/coffee8.jpg"},
   ];
 
   const [selectedID, setSelectedID] = useState(options[0].id);
@@ -64,10 +64,10 @@ function App() {
       <h1>Custom Water Bottle Builder</h1>
       
       <div class="bottle-image-container">
-        <img src="/public/images/base.jpg" class="image-base"/>
-        {c1Checked && <img src="/public/images/cap.png" class="image-overlay"/>}
-        {c2Checked && <img src="/public/images/label.png" class="image-overlay"/>}
-        {c3Checked && <img src="/public/images/chapstick.png" class="image-overlay"/>}
+        <img src="/images/base.jpg" class="image-base"/>
+        {c1Checked && <img src="/images/cap.png" class="image-overlay"/>}
+        {c2Checked && <img src="/images/label.png" class="image-overlay"/>}
+        {c3Checked && <img src="/images/chapstick.png" class="image-overlay"/>}
       </div>
 
       <div class="checkbox-container">
