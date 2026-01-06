@@ -2,12 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex-wrap: wrap;
 }
 
 .table-image {
   max-width: 50%;
   height: auto;
-  flex: 0 0 auto;
+  flex: 0 0 860px;
 }
 
 .table-options {
@@ -17,27 +19,18 @@
   justify-content: center;
   min-width: 0;
   max-width: 60%;
-  flex: 1 1 0;
+  flex: 1 1 840px;
 }
 
 .table-button {
   flex: 1 1 0;
-  min-width: 0px;
-  min-height: 50px;
+  min-width: 101px;
+  max-width: 116px;
+  height: 50px;
   padding: "8px 12px";
 
   border-radius: 8px;
   border: "1px solid #ccc";
-}
-
-@media (max-width: 1300px) {
-  .table-image-container {
-    flex-direction: column;
-  }
-
-  .table-image {
-    width: 100%;
-  }
 }
 
 .bottle-image-container {
