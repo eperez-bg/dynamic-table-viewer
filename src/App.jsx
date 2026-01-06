@@ -68,37 +68,39 @@ function App() {
         {c1Checked && <img src="/images/cap.png" class="image-overlay"/>}
         {c2Checked && <img src="/images/label.png" class="image-overlay"/>}
         {c3Checked && <img src="/images/chapstick.png" class="image-overlay"/>}
+
+        <div class="checkbox-container">
+          <input 
+            id='cap'
+            class="bottle-button"
+            type="button"
+            value="cap"
+            checked={c1Checked}
+            onClick={handlec1Checked}
+            style={{position:"relative", zIndex:2}}
+          />
+
+          <input 
+            id='label'
+            class="bottle-button"
+            type="button"
+            value="label"
+            checked={c2Checked}
+            onClick={handlec2Checked}
+            style={{position:"relative", zIndex:2}}
+          />
+
+          <input 
+            id='chapstick'
+            class="bottle-button"
+            type="button"
+            value="chapstick"
+            checked={c3Checked}
+            onClick={handlec3Checked}
+            style={{position:"relative", zIndex:2}}
+          />
+        </div>
       </div>
-
-      <div class="checkbox-container">
-        <input 
-          id='cap'
-          class="checkbox-wrapper-41"
-          type="checkbox"
-          checked={c1Checked}
-          onChange={handlec1Checked}
-          style={{position:"relative", zIndex:2}}
-        />
-
-        <input 
-          id='label'
-          class="checkbox-wrapper-41"
-          type="checkbox"
-          checked={c2Checked}
-          onChange={handlec2Checked}
-          style={{position:"relative", zIndex:2}}
-        />
-
-        <input 
-          id='chapstick'
-          class="checkbox-wrapper-41"
-          type="checkbox"
-          checked={c3Checked}
-          onChange={handlec3Checked}
-          style={{position:"relative", zIndex:2}}
-        />
-      </div>
-
     </>
   )
 }

@@ -38,6 +38,7 @@
   max-width: 100%;
   max-height: 100%;
   display: flex;
+  flex-direction: column;
   position: relative;
   width: auto;
   height: auto;
@@ -60,17 +61,22 @@
   max-height: 100%;
 }
 
-.table-image-container {
-  display: flex;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .checkbox-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 15px 0 50px;
+  gap: 20px;
+  width: 80%;
+}
+
+.bottle-button {
+  min-width: 100px;
+  min-height: 50px;
+  max-width: 300px;
+  max-height: 150px;
+  width: 80%;
+  height: 80%;
 }
 
 h1 {
