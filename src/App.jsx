@@ -60,14 +60,16 @@ function App() {
         </div>
       </div>
 
-
-      <h1>Custom Water Bottle Builder</h1>
       
       <div class="bottle-image-container">
-        <img src="/images/base.jpg" class="image-base"/>
-        {c1Checked && <img src="/images/cap.png" class="image-overlay"/>}
-        {c2Checked && <img src="/images/label.png" class="image-overlay"/>}
-        {c3Checked && <img src="/images/chapstick.png" class="image-overlay"/>}
+        <h1>Custom Water Bottle Builder</h1>
+
+        <div class='img-stack'>
+          <img src="/images/base.jpg" class="image-base"/>
+          {c1Checked && <img src="/images/cap.png" class="image-overlay"/>}
+          {c2Checked && <img src="/images/label.png" class="image-overlay"/>}
+          {c3Checked && <img src="/images/chapstick.png" class="image-overlay"/>}
+        </div>
 
         <div class="checkbox-container">
           <input 
@@ -77,7 +79,6 @@ function App() {
             value="cap"
             checked={c1Checked}
             onClick={handlec1Checked}
-            style={{position:"relative", zIndex:2}}
           />
 
           <input 
@@ -87,7 +88,6 @@ function App() {
             value="label"
             checked={c2Checked}
             onClick={handlec2Checked}
-            style={{position:"relative", zIndex:2}}
           />
 
           <input 
@@ -97,7 +97,6 @@ function App() {
             value="chapstick"
             checked={c3Checked}
             onClick={handlec3Checked}
-            style={{position:"relative", zIndex:2}}
           />
         </div>
       </div>
