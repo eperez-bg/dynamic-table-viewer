@@ -21,12 +21,12 @@ function App() {
 
   // COLORS:    Original: #dbdce1
   //            Black: #24201f
-  //            Blue: #27455d
+  //            Blue: #4553b4
   //            Gray: #a8acad
   const options = [
     { id: 0, label:"Original", src: "/images/Original.png", color:"#dbdce1"},
     { id: 1, label:"Black", src: "/images/Black.png", color:"#24201f"},
-    { id: 2, label:"Blue", src: "/images/Blue.png", color:"#27455d"},
+    { id: 2, label:"Blue", src: "/images/Blue.png", color:"#4553b4"},
     { id: 3, label:"Gray", src: "/images/Gray.png", color:"#a8acad"},
   ];
 
@@ -155,7 +155,7 @@ function App() {
           </div>
 
           <div class="addons">
-            <label class="addons-label">ADD-ONS</label>
+            <label class="addons-label"><p class="addons-label-text">ADD-ONS</p></label>
             <div class="table-addons">
               <input 
                 id='Keyboard'
