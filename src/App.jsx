@@ -4,7 +4,10 @@ import './css/App.css'
 function App() {
   
   // Table State & Handling
-  const options = [
+
+  //// OLD TABLE, NOW USING WORKBENCH ASSETS ////
+
+  /*const options = [
     { id: 0, label:"Classic", src: "/images/coffee1.jpg"},
     { id: 1, label:"Birch", src: "/images/coffee2.jpg"},
     { id: 2, label:"White Marble", src: "/images/coffee3.jpg"},
@@ -13,15 +16,25 @@ function App() {
     { id: 5, label:"White Marble w/ Gold Rails", src: "/images/coffee6.jpg"},
     { id: 6, label:"White Marble w/ White Rails", src: "/images/coffee7.jpg"},
     { id: 7, label:"Classic w/ White Rails", src: "/images/coffee8.jpg"},
+  ]; */
+
+  const options = [
+    { id: 0, label:"Original", src: "/images/Original.png", color:"#dbdce1"},
+    { id: 1, label:"Black", src: "/images/Black.png", color:"#27455d"},
+    { id: 2, label:"Blue", src: "/images/Blue.png", color:"#a8acad"},
+    { id: 3, label:"Gray", src: "/images/Gray.png", color:"#24201f"},
   ];
+
 
   const [selectedID, setSelectedID] = useState(options[0].id);
 
 
   // Checkbox State & Handling
-  const [c1Checked, setc1Checked] = useState(false);  // Cap
-  const [c2Checked, setc2Checked] = useState(false);  // Label
-  const [c3Checked, setc3Checked] = useState(false);  // Chapstick
+  const [c1Checked, setc1Checked] = useState(false);  // Keyboard
+  const [c2Checked, setc2Checked] = useState(false);  // Paper Towel
+
+  //// WAS USING FOR WATER BOTTLE DEMO -- NO LONGER IN USE ////
+  // const [c3Checked, setc3Checked] = useState(false);  // Chapstick
   
 
   const handlec1Checked = () => {
@@ -32,11 +45,20 @@ function App() {
     setc2Checked(!c2Checked);
   };
 
+
+  var checks = [
+    { id: 0, check: c1Checked, handle: handlec1Checked, value: "Keyboard" },
+    { id: 1, check: c2Checked, handle: handlec2Checked, value: "Paper Towels" },
+  ];
+
+  /*  //// NO LONGER IN USE ////
   const handlec3Checked = () => {
     setc3Checked(!c3Checked);
-  };
+  }; */
 
 
+  //// ORIGINAL CODE FOR OLD TABLE + WATER BOTTLE DEMO ////
+  /*
   return (
     <>
       <h1>Table Selector</h1>
@@ -98,6 +120,57 @@ function App() {
             checked={c3Checked}
             onClick={handlec3Checked}
           />
+        </div>
+      </div>
+    </>
+  )
+  */
+
+  return (
+    <>
+      <div class="table-image-container">
+        <div class="img-stack">
+          <img src={options[selectedID].src} class="image-base"/>
+          {c1Checked && <img src="/images/Keyboard.png" class="image-overlay"/>}
+          {c2Checked && <img src="/images/Paper-Towel.png" class="image-overlay"/>}
+        </div>
+
+        <div class="buttons">
+          <label class="colors-label">COLORS</label>
+          <div class="color-options">
+            {options.map( (opt) => (
+              <button
+                key={opt.id}
+                class="color-button"
+                type='button'
+                role='radio'
+                aria-checked={selectedID === opt.id}
+                onClick={() => setSelectedID(opt.id)}
+                style={{ backgroundColor: opt.color }}
+              >
+              </button>
+            ))}
+          </div>
+
+          <div class="table-addons">
+            <input 
+              id='Keyboard'
+              class="addon-button"
+              type="button"
+              value="Keyboard"
+              checked={c1Checked}
+              onClick={handlec1Checked}
+            />
+
+            <input 
+              id='Paper-Towel'
+              class="addon-button"
+              type="button"
+              value="Paper Towel"
+              checked={c2Checked}
+              onClick={handlec2Checked}
+            />
+          </div>
         </div>
       </div>
     </>
