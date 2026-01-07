@@ -18,11 +18,16 @@ function App() {
     { id: 7, label:"Classic w/ White Rails", src: "/images/coffee8.jpg"},
   ]; */
 
+
+  // COLORS:    Original: #dbdce1
+  //            Black: #24201f
+  //            Blue: #27455d
+  //            Gray: #a8acad
   const options = [
     { id: 0, label:"Original", src: "/images/Original.png", color:"#dbdce1"},
-    { id: 1, label:"Black", src: "/images/Black.png", color:"#27455d"},
-    { id: 2, label:"Blue", src: "/images/Blue.png", color:"#a8acad"},
-    { id: 3, label:"Gray", src: "/images/Gray.png", color:"#24201f"},
+    { id: 1, label:"Black", src: "/images/Black.png", color:"#24201f"},
+    { id: 2, label:"Blue", src: "/images/Blue.png", color:"#27455d"},
+    { id: 3, label:"Gray", src: "/images/Gray.png", color:"#a8acad"},
   ];
 
 
