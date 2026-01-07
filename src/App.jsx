@@ -46,11 +46,6 @@ function App() {
   };
 
 
-  var checks = [
-    { id: 0, check: c1Checked, handle: handlec1Checked, value: "Keyboard" },
-    { id: 1, check: c2Checked, handle: handlec2Checked, value: "Paper Towels" },
-  ];
-
   /*  //// NO LONGER IN USE ////
   const handlec3Checked = () => {
     setc3Checked(!c3Checked);
@@ -131,45 +126,50 @@ function App() {
       <div class="table-image-container">
         <div class="img-stack">
           <img src={options[selectedID].src} class="image-base"/>
-          {c1Checked && <img src="/images/Keyboard.png" class="image-overlay"/>}
-          {c2Checked && <img src="/images/Paper-Towel.png" class="image-overlay"/>}
+          {c1Checked && <img src="/images/Fufillment_Bench_Keyboardpng.png" class="image-overlay"/>}
+          {c2Checked && <img src="/images/Fufillment_Bench_Paperpng.png" class="image-overlay"/>}
         </div>
 
         <div class="buttons">
-          <label class="colors-label">COLORS</label>
-          <div class="color-options">
-            {options.map( (opt) => (
-              <button
-                key={opt.id}
-                class="color-button"
-                type='button'
-                role='radio'
-                aria-checked={selectedID === opt.id}
-                onClick={() => setSelectedID(opt.id)}
-                style={{ backgroundColor: opt.color }}
-              >
-              </button>
-            ))}
+          <div class="colors-container">
+            <label class="colors-label">COLORS</label>
+            <div class="color-options">
+              {options.map( (opt) => (
+                <button
+                  key={opt.id}
+                  class="color-button"
+                  type='button'
+                  role='radio'
+                  aria-checked={selectedID === opt.id}
+                  onClick={() => setSelectedID(opt.id)}
+                  style={{ backgroundColor: opt.color }}
+                >
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div class="table-addons">
-            <input 
-              id='Keyboard'
-              class="addon-button"
-              type="button"
-              value="Keyboard"
-              checked={c1Checked}
-              onClick={handlec1Checked}
-            />
+          <div class="addons">
+            <label class="addons-label">ADD-ONS</label>
+            <div class="table-addons">
+              <input 
+                id='Keyboard'
+                class="addon-button"
+                type="button"
+                value="KEYBOARD"
+                checked={c1Checked}
+                onClick={handlec1Checked}
+              />
 
-            <input 
-              id='Paper-Towel'
-              class="addon-button"
-              type="button"
-              value="Paper Towel"
-              checked={c2Checked}
-              onClick={handlec2Checked}
-            />
+              <input 
+                id='Paper-Towel'
+                class="addon-button"
+                type="button"
+                value="TOWEL HOLDER"
+                checked={c2Checked}
+                onClick={handlec2Checked}
+              />
+            </div>
           </div>
         </div>
       </div>

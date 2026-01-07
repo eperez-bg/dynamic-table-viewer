@@ -31,18 +31,19 @@
 }
 
 .buttons {
-
-}
-
-.color-options {
   display: flex;
-  gap: 8px;
+  flex-direction: row;
+  width: 35%;
+  height: 175px;
   align-items: center;
   justify-content: center;
-  min-width: 0;
-  max-width: 40%;
-  flex: 1 1 700x;
-  flex-wrap: wrap;
+}
+
+.colors-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
 }
 
 .colors-label {
@@ -50,11 +51,19 @@
   align-items: center;
   justify-content: center;
   height: 50px;
-  width: 40%;
+  width: 90%;
   color: white;
   background-color: #27455d;
   font-size: 25px;
   margin-bottom: 10px;
+}
+
+.color-options {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
 }
 
 .color-button {
@@ -64,23 +73,41 @@
   border-radius: 25px;
 }
 
+.addons {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+}
+
+.addons-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  color: white;
+  background-color: #27455d;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
 .table-addons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15px 0 50px;
-  gap: 20px;
-  min-width: 561px;
-  width: 80%;
+  gap: 7px;
+  width: 100%;
 }
 
 .addon-button {
   min-width: 100px;
   min-height: 50px;
-  max-width: 33.33%;
+  max-width: 50%;
   max-height: 150px;
-  width: 80%;
-  height: 80%;
+  width: 50%;
+  height: 100%;
 }
 
 h1 {
